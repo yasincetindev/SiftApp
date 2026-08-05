@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Sift</title>
+<meta name="description" content="How Sift handles your data: what is collected, where it is stored, and how to delete it.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="./">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#e8a33d"/>
+        <path d="M16 22h32M22 32h20M28 42h8" stroke="#17150f" stroke-width="5"
+              stroke-linecap="round" fill="none"/>
+      </svg>
+      Sift
+    </a>
+    <nav class="site">
+      <a href="./">Home</a>
+      <a href="terms.en.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc wrap">
+  <span class="lang-switch"><a href="privacy.html">Türkçe sürüm →</a></span>
+
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 5 August 2026</p>
+
+  <p>
+    Sift is an iOS app that saves the content you come across on Instagram,
+    organizes it for you, and brings it back when it is useful. This policy
+    explains what data is processed when you use the app, where it is stored,
+    and how you can delete it.
+  </p>
+
+  <h2>Summary</h2>
+  <ul>
+    <li>What you save lives <strong>on your device first</strong>.</li>
+    <li>AI analysis runs <strong>on your device by default</strong>; if a cloud
+      model is needed instead, you are told during onboarding.</li>
+    <li>You can use the app without an account. Your data syncs across devices
+      only once you sign in.</li>
+    <li>There is <strong>no advertising tracking, no third-party analytics</strong>,
+      and no sharing of your data for advertising.</li>
+    <li>Saved content (titles, links, notes) is <strong>never written to logs</strong>
+      or crash reports.</li>
+    <li>You can permanently delete your account and all of your data from
+      inside the app.</li>
+  </ul>
+
+  <h2>Data we process</h2>
+
+  <h3>Content you save</h3>
+  <p>
+    When you save a post to Sift we process: the content's link, its caption
+    text, the thumbnail address, the short summary, tags and category produced
+    by the AI, the date you saved it, its status (new / viewed / tried /
+    archived), and any personal note you add.
+  </p>
+
+  <h3>Account information</h3>
+  <p>
+    On first launch the app creates an <strong>anonymous</strong> session whose
+    identifier is a random string that does not identify you. If you choose to
+    sign in with Apple or Google, the name and email address that provider
+    shares with us is associated with your account. Sift never sees or stores
+    your password.
+  </p>
+
+  <h3>Instagram link (only if you use saving by DM)</h3>
+  <p>
+    If you choose to connect your Instagram account, we store the
+    <strong>app-scoped user ID</strong> Instagram gives us (the
+    Instagram-scoped ID), your username, and the date you connected. This
+    mapping is what lets content you DM reach the right archive. The step is
+    entirely optional and can be undone at any time.
+  </p>
+
+  <h3>Technical data</h3>
+  <p>
+    Our server-side records contain anonymous outcomes only (for example
+    "an item was saved", "a link was established"). Message text, captions,
+    links and raw user identifiers are <strong>never</strong> written to these
+    records. We do not collect advertising identifiers and do not track you
+    across apps or sites.
+  </p>
+
+  <h2>How we use the data</h2>
+  <ul>
+    <li>To show you what you saved and make it searchable.</li>
+    <li>To categorize and summarize content automatically.</li>
+    <li>To sync your data across your devices, if you have an account.</li>
+    <li>To show an end-of-day reminder, if you allowed notifications.</li>
+    <li>To keep the service secure (for example, rate-limiting abuse).</li>
+  </ul>
+  <p>
+    We do not sell your data, do not share it for advertising, and do not allow
+    anyone but you to reach your archive.
+  </p>
+
+  <h2>AI processing</h2>
+  <p>
+    Summarizing and categorizing content runs <strong>on your device's own AI
+    model first</strong>, in which case the content never leaves the device. If
+    your device does not support that model, or the model is temporarily
+    unavailable, the work is done by Google's cloud model (Gemini via Firebase
+    AI Logic). You are told about this possibility when you first open the app.
+    Only the caption text of the item in question is sent for cloud processing,
+    and it is not used to train models.
+  </p>
+
+  <h2>Saving by Instagram DM</h2>
+  <p>
+    When you DM a post to Sift's Instagram account
+    (<a href="https://www.instagram.com/hellosiftapp/">@hellosiftapp</a>), that
+    message travels through Meta's systems to our server. Our server reads the
+    content link and caption from the message, creates an entry in your
+    archive, and sends you a short confirmation reply.
+  </p>
+  <p>
+    This is a deliberate exception to the app's on-device principle: when you
+    message a business account, the content passes through Meta and our server
+    by design. That is why we state it plainly on the connect screen. AI
+    analysis still runs on your device — what passes through the server is
+    transport, not analysis.
+  </p>
+  <p>
+    Messages you send through Instagram are also subject to Meta's own privacy
+    policy.
+  </p>
+
+  <h2>Storage and sharing</h2>
+  <p>
+    Your data is stored on your device and — if you have signed in — in an area
+    reserved for your account on Google Firebase (Firestore). Security rules
+    ensure that only your account can read its own data.
+  </p>
+  <p>Your data is processed via the following providers:</p>
+  <ul>
+    <li><strong>Google Firebase</strong> — authentication, storage, server
+      functions and (when needed) cloud AI.</li>
+    <li><strong>Meta</strong> — only if you use saving by Instagram DM, to
+      deliver those messages.</li>
+    <li><strong>Apple</strong> — Sign in with Apple and notifications.</li>
+  </ul>
+  <p>
+    We share your data with no one else. Where a legal obligation arises, we
+    may disclose data to the extent applicable law requires.
+  </p>
+
+  <h2>Retention</h2>
+  <p>
+    Saved content is kept until you delete it or close your account. Content
+    you delete in the app is archived first; deleting your account removes
+    everything permanently. The Instagram link mapping is deleted when you
+    unlink or delete your account.
+  </p>
+
+  <h2>Your rights and how to delete your data</h2>
+  <p>
+    You can access, correct and delete your data from within the app at any
+    time. Under applicable law (GDPR / Turkey's KVKK) you also have the right
+    to access your data, request its correction or erasure, and object to
+    processing.
+  </p>
+  <p><strong>To delete all of your data:</strong></p>
+  <ul>
+    <li>In the app, go to <em>Profile → Account &amp; sync → Delete account</em>.
+      This permanently removes all of your data both on the device and on the
+      server, and cannot be undone.</li>
+    <li>To remove <strong>only the Instagram link</strong>, send
+      <code>unlink</code> as a DM to @hellosiftapp. Your archive stays; new
+      posts you send are no longer saved.</li>
+    <li>If you no longer have access to the app, write to us at the address
+      below to request deletion.</li>
+  </ul>
+
+  <h2>Children's privacy</h2>
+  <p>
+    Sift is not directed to children under 13 and does not knowingly collect
+    data from them. If we learn that we have collected such data, we delete it.
+  </p>
+
+  <h2>Changes</h2>
+  <p>
+    We may update this policy from time to time. When a significant change
+    happens we will say so in the app; the date at the top of this page always
+    reflects the version in force.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    For privacy questions or requests, write to
+    <a href="mailto:SIFT_CONTACT_EMAIL">SIFT_CONTACT_EMAIL</a> or reach us at
+    <a href="https://www.instagram.com/hellosiftapp/">@hellosiftapp</a>. We
+    respond to requests within 30 days at the latest.
+  </p>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <a href="./">Home</a>
+    <a href="terms.en.html">Terms of Service</a>
+    <a href="privacy.html">Gizlilik (TR)</a>
+    <div class="copyright">© 2026 Sift</div>
+  </div>
+</footer>
+
+</body>
+</html>
