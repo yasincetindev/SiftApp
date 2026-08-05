@@ -18,14 +18,14 @@ GitHub Pages.
 (`SiftKit/Sources/SiftDesignSystem/Resources/Colors.xcassets`): amber accent,
 warm off-white canvas, automatic light/dark.
 
-## Before publishing
+## Contact address
 
-Replace the `SIFT_CONTACT_EMAIL` placeholder with the real contact address —
-it appears in `privacy.html`, `privacy.en.html`, `terms.html` and
-`terms.en.html`:
+`hellosiftapp@gmail.com` is the published contact address, in `privacy.html`,
+`privacy.en.html`, `terms.html` and `terms.en.html`. If it ever changes, all
+four pages have to change together:
 
 ```bash
-grep -rl SIFT_CONTACT_EMAIL . | xargs sed -i '' 's/SIFT_CONTACT_EMAIL/your@address/g'
+grep -rl hellosiftapp@gmail.com . | xargs sed -i '' 's/hellosiftapp@gmail.com/new@address/g'
 ```
 
 ## Enabling GitHub Pages
