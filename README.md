@@ -14,6 +14,9 @@ GitHub Pages.
 | `terms.html` | `/terms.html` | Terms of service (Turkish) |
 | `terms.en.html` | `/terms.en.html` | Terms of service (English) |
 
+`appstore.png` is the 1024px master icon; `icon-512/180/64.png` are the web-sized
+derivatives (regenerate with `sips -Z <size> appstore.png --out icon-<size>.png`).
+
 `style.css` is shared by every page and follows the app's design tokens
 (`SiftKit/Sources/SiftDesignSystem/Resources/Colors.xcassets`): amber accent,
 warm off-white canvas, automatic light/dark.

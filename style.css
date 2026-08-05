@@ -79,10 +79,11 @@ header.site .wrap {
   letter-spacing: -0.01em;
 }
 
-.brand svg {
+.brand img {
   width: 28px;
   height: 28px;
   flex: 0 0 auto;
+  border-radius: 7px;
 }
 
 nav.site a {
@@ -101,6 +102,22 @@ nav.site a:hover {
 .hero {
   padding: 72px 0 56px;
   text-align: center;
+}
+
+.hero-icon {
+  width: 112px;
+  height: 112px;
+  border-radius: 25px;
+  margin-bottom: 26px;
+  /* The icon carries its own dark background, so it needs separation from a
+     light canvas but not from a dark one. */
+  box-shadow: 0 8px 28px rgb(0 0 0 / 14%);
+}
+
+@media (prefers-color-scheme: dark) {
+  .hero-icon {
+    box-shadow: none;
+  }
 }
 
 .hero h1 {
