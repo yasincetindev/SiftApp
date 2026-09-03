@@ -20,6 +20,7 @@
     <nav class="site">
       <a href="./">Home</a>
       <a href="terms.en.html">Terms</a>
+      <a href="support.en.html">Support</a>
     </nav>
   </div>
 </header>
@@ -28,7 +29,7 @@
   <span class="lang-switch"><a href="privacy.html">Türkçe sürüm →</a></span>
 
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 16 August 2026</p>
+  <p class="updated">Last updated: 3 September 2026</p>
 
   <p>
     Sift is an iOS app that saves the content you come across on Instagram,
@@ -49,14 +50,15 @@
       it, and in the cloud if it does not; you are told which during onboarding.</li>
     <li>You can use the app without an account. Your data syncs across devices
       only once you sign in.</li>
-    <li>There is <strong>no advertising tracking, no third-party analytics</strong>,
+    <li>There is <strong>no advertising tracking, no advertising identifier</strong>,
       and no sharing of your data for advertising.</li>
+    <li>There is <strong>anonymous</strong> usage analytics measuring which
+      screens get used. It is on by default and can be switched off in
+      <em>Profile &rarr; Privacy</em>. Nothing you save ever enters it.</li>
     <li>Saved content (titles, links, notes) is <strong>never written to logs</strong>
       or crash reports.</li>
     <li>Notifications are scheduled <strong>on your device only</strong>; we run
       no notification server.</li>
-    <li>Saving by Instagram DM is an <strong>optional</strong> route and, by its
-      nature, means messaging an Instagram account — details below.</li>
     <li>You can permanently delete your account and all of your data from
       inside the app.</li>
   </ul>
@@ -98,34 +100,44 @@
     to that point moves into your account.
   </p>
 
-  <h3>Instagram link (only if you use saving by DM)</h3>
-  <p>
-    If you choose to connect your Instagram account, we store the
-    <strong>app-scoped user ID</strong> Instagram gives us (the
-    Instagram-scoped ID), your username, and the date you connected. This
-    mapping is what lets content you DM reach the right archive. The step is
-    entirely optional, can be undone at any time, and requires a permanent
-    account (Sign in with Apple or Google) — the incoming content has to land
-    in an account.
-  </p>
-  <p>
-    While connecting, the app generates a six-digit, <strong>single-use</strong>
-    code; it expires after 15 minutes and is deleted the moment it is used. To
-    limit abuse, we temporarily keep a count of failed code attempts per sender.
-  </p>
-
   <h3>Technical data</h3>
   <p>
-    Our server-side records contain anonymous outcomes only (for example
-    "an item was saved", "a link was established"). Message text, captions,
-    links and raw user identifiers are <strong>never</strong> written to these
-    records. We do not collect advertising identifiers and do not track you
-    across apps or sites.
+    The app has no server of its own: your device talks only to Google Firebase
+    (authentication, sync and, where needed, cloud AI) and to the address of the
+    link you saved. We do not collect advertising identifiers and do not track
+    you across apps or sites.
   </p>
   <p>
-    To verify that requests reaching our server really come from the Sift app,
-    we use Apple's App Attest (via Firebase App Check). This proves the device
-    is running the app; it <strong>does not identify you</strong>.
+    To verify that requests reaching Firebase really come from the Sift app, we
+    use Apple's App Attest (via Firebase App Check). This proves the device is
+    running the app; it <strong>does not identify you</strong>.
+  </p>
+
+  <h3>Usage analytics</h3>
+  <p>
+    We use Google Firebase Analytics to measure which screens get used and which
+    features people reach for. What is measured is counts and a fixed set of
+    event names — <strong>nothing you save, no captions, links, notes or
+    anything the AI wrote about them ever enters these events</strong>; the
+    fields an event may carry are a closed list in the code.
+  </p>
+  <p>
+    The measurement is tied to a per-device Firebase app instance id. That id is
+    <strong>not an advertising identifier</strong> and cannot be used to track
+    you across apps — Sift deliberately omits the Firebase component that would
+    collect the advertising identifier. Analytics is on by default, is mentioned
+    on the first-run screen, and can be switched off at any time in
+    <em>Profile &rarr; Privacy</em>; collection stops the moment you switch it
+    off.
+  </p>
+
+  <h3>Purchase state</h3>
+  <p>
+    The app includes RevenueCat's SDK for paid features we intend to offer
+    later. Nothing is for sale in this version and the app never starts a
+    purchase; the SDK only generates an anonymous user id on first launch and
+    can ask whether the device's Apple Account already holds a Sift purchase.
+    That id is not associated with your name, your email, or anything you save.
   </p>
 
   <h2>How we use the data</h2>
@@ -135,7 +147,10 @@
     <li>To sync your data across your devices, if you have an account.</li>
     <li>To show the end-of-day summary and any reminders you set on individual
       items, if you allowed notifications.</li>
-    <li>To keep the service secure (for example, rate-limiting abuse).</li>
+    <li>To keep the service secure (for example, verifying that requests really
+      come from the app).</li>
+    <li>To measure anonymously which screens and features get used, so we can
+      decide what to build next.</li>
   </ul>
   <p>
     We do not sell your data, do not share it for advertising, and do not allow
@@ -151,30 +166,29 @@
     <li><strong>Performance of a contract</strong> — storing what you save,
       organizing it, making it searchable, and syncing it if you have an
       account. Without this the app cannot do its job.</li>
-    <li><strong>Consent</strong> — saving by Instagram DM (connecting your
-      account) and notifications. Both are optional; you can withdraw consent at
-      any time (disconnect, turn off notification permission), and withdrawal
-      does not affect processing already carried out.</li>
+    <li><strong>Consent</strong> — notifications. They are optional; you can
+      withdraw consent at any time (turn off notification permission), and
+      withdrawal does not affect processing already carried out.</li>
     <li><strong>Legitimate interests</strong> — protecting the service from
-      abuse (rate-limiting failed codes, verifying that requests really come
-      from the app) and measuring how accurate the classification is.</li>
+      abuse (verifying that requests really come from the app), measuring how
+      accurate the classification is, and measuring anonymously how the app is
+      used. You can object to that last one at any time by switching analytics
+      off in <em>Profile &rarr; Privacy</em>.</li>
     <li><strong>Legal obligation</strong> — where the law expressly requires
       it.</li>
   </ul>
 
   <h2>Where your data is processed</h2>
   <p>
-    Our server functions run in Google Cloud's <strong>European</strong> region
-    (europe-west1). Our providers, however — Google, Apple, and Meta if you use
-    the Instagram feature — operate global infrastructure, so your data
-    <strong>may also be processed in countries outside Türkiye and
-    Europe</strong>.
+    Our providers — Google, Apple and RevenueCat — operate global
+    infrastructure, so your data <strong>may also be processed in countries
+    outside Türkiye and Europe</strong>.
   </p>
   <p>
     Those transfers take place under the standard contractual clauses and data
     processing terms of the providers concerned. If you would rather your data
-    did not travel abroad, you have two options: used without signing in,
-    nothing leaves your device, and you never have to use the Instagram feature.
+    did not travel abroad: used without signing in, nothing you save leaves your
+    device, and analytics can be switched off in <em>Profile &rarr; Privacy</em>.
   </p>
 
   <h2>Security</h2>
@@ -182,9 +196,7 @@
     Your data travels between your device and our servers over an
     <strong>encrypted connection</strong> (HTTPS/TLS) and is stored on your
     device under iOS's own protections. On the server, security rules ensure
-    that only your account can reach its own data, and no client can read the
-    Instagram mapping records at all. Every request from Instagram is
-    signature-verified, and access tokens are rotated regularly.
+    that only your account can reach its own data.
   </p>
   <p>
     No system is entirely without risk. If a breach affects the security of your
@@ -234,63 +246,6 @@
     notification permission, the rest of the app works exactly the same.
   </p>
 
-  <h2>Saving by Instagram DM</h2>
-  <p>
-    When you DM a post to Sift's Instagram account
-    (<a href="https://www.instagram.com/siftsave/">@siftsave</a>), that
-    message travels through Meta's systems to our server. Our server reads the
-    content link and caption from the message, creates an entry in your
-    archive, and sends you a short confirmation reply.
-  </p>
-  <p>
-    This is a deliberate exception to the app's on-device principle: when you
-    message a business account, the content passes through Meta and our server
-    by design. That is why we state it plainly on the connect screen. AI
-    analysis still runs on your device — what passes through the server is
-    transport, not analysis.
-  </p>
-
-  <h3>Inbox visibility</h3>
-  <div class="note">
-    <p style="margin-top:0">
-      <strong>This needs saying plainly:</strong> @siftsave is an Instagram
-      account, and messages sent to it appear in that account's inbox — exactly
-      as they would with any business account you write to. So the person
-      operating the account can technically see what you send. Instagram's API
-      does not change this; no app can hide an account's incoming messages from
-      the account's own owner.
-    </p>
-    <p style="margin-bottom:0">
-      That is why we commit to the following: the account is operated only by
-      the person who builds Sift and is protected with two-factor
-      authentication; the inbox is opened only for support and troubleshooting;
-      message content is never exported, never shared with third parties, and
-      never used for advertising or profiling. <strong>We suggest not sending
-      anything by DM you would not want seen</strong> — the in-app share
-      extension (Sift from the share sheet) does the same job and touches no
-      server.
-    </p>
-  </div>
-
-  <h3>The note you send by DM</h3>
-  <p>
-    A plain text message you send within <strong>90 seconds</strong> of sharing
-    an item becomes that item's note in your archive (either order counts, since
-    Instagram's share sheet lets you type before or after picking the content).
-    The window is single-use and never overwrites an existing note. It is
-    deliberately short: we do not want ordinary conversation landing in your
-    archive.
-  </p>
-  <p>
-    Messages outside that window are <strong>not stored</strong>. We reply to
-    them — for example with instructions if you have not connected an account
-    yet — but their content is written nowhere.
-  </p>
-  <p>
-    Messages you send through Instagram are also subject to Meta's own privacy
-    policy.
-  </p>
-
   <h2>Storage and sharing</h2>
   <p>
     Your data is stored on your device and — if you have signed in — in an area
@@ -299,11 +254,11 @@
   </p>
   <p>Your data is processed via the following providers:</p>
   <ul>
-    <li><strong>Google Firebase</strong> — authentication, storage, server
-      functions and (when needed) cloud AI.</li>
-    <li><strong>Meta</strong> — only if you use saving by Instagram DM, to
-      deliver those messages.</li>
-    <li><strong>Apple</strong> — Sign in with Apple and notifications.</li>
+    <li><strong>Google Firebase</strong> — authentication, storage, analytics
+      and (when needed) cloud AI.</li>
+    <li><strong>Apple</strong> — Sign in with Apple.</li>
+    <li><strong>RevenueCat</strong> — managing purchase state for paid features
+      we intend to offer later. It never sees anything you save.</li>
   </ul>
   <p>
     We share your data with no one else. Where a legal obligation arises, we
@@ -314,15 +269,7 @@
   <p>
     Saved content is kept until you delete it or close your account. Content
     you delete in the app is archived first; deleting your account removes
-    everything permanently. The Instagram link mapping is deleted immediately
-    when you unlink; if you delete your account, a regular cleanup job removes
-    it within 24 hours at the latest.
-  </p>
-  <p>
-    The short-lived records we keep on the server to operate the Instagram
-    channel are these, and none of them carry message content: a pending link
-    code (15 minutes), the note window record (90 seconds), a failed-code
-    attempt counter, and the fact that a welcome message has already been sent.
+    everything permanently.
   </p>
 
   <h2 id="deletion">Your rights and how to delete your data</h2>
@@ -357,10 +304,6 @@
     <li>In the app, go to <em>Profile → Account &amp; sync → Delete account</em>.
       This permanently removes all of your data both on the device and on the
       server, and cannot be undone.</li>
-    <li>To remove <strong>only the Instagram link</strong>, there are two ways:
-      in the app, <em>Profile → Connect Instagram → Disconnect</em>, or send
-      <code>unlink</code> as a DM to @siftsave. Either one deletes the
-      mapping; your archive stays and new posts you send are no longer saved.</li>
     <li>If you no longer have access to the app, write to us at the address
       below to request deletion.</li>
   </ul>
@@ -396,6 +339,7 @@
   <div class="wrap">
     <a href="./">Home</a>
     <a href="terms.en.html">Terms of Service</a>
+    <a href="support.en.html">Support</a>
     <a href="privacy.html">Gizlilik (TR)</a>
     <div class="copyright">© 2026 Sift</div>
   </div>
