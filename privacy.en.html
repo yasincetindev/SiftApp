@@ -29,10 +29,10 @@
   <span class="lang-switch"><a href="privacy.html">Türkçe sürüm →</a></span>
 
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 3 September 2026</p>
+  <p class="updated">Last updated: 3 November 2026</p>
 
   <p>
-    Sift is an iOS app that saves the content you come across on Instagram,
+    Sift is an iOS app that saves the content you come across on Instagram and X,
     organizes it for you, and brings it back when it is useful. This policy
     explains what data is processed when you use the app, where it is stored,
     and how you can delete it.
@@ -76,7 +76,10 @@
   <p>
     To fetch an item's title, description and thumbnail, the app requests the
     link <strong>directly from your device</strong>; no server of ours sits in
-    between.
+    between. For X posts that request goes to X's own embed services instead:
+    the app asks X, by the post's number, for its text, account name and cover
+    image. When a post links to another site, the preview image is taken only
+    from X's own servers; the linked site is never contacted.
   </p>
   <p>
     If you change the category the AI picked, that correction (old category,
@@ -87,15 +90,15 @@
 
   <h3>Account information</h3>
   <p>
-    On first launch the app creates an <strong>anonymous</strong> session whose
-    identifier is a random string that does not identify you. If you choose to
+    Used without an account, the app creates <strong>no account and no
+    session</strong> at all; you use it as a guest. If you choose to
     sign in with Apple or Google, the name and email address that provider
     shares with us is associated with your account. Sift never sees or stores
     your password.
   </p>
   <p>
     Until you sign in, <strong>none of your content leaves your device</strong>:
-    an anonymous session does not sync, and your archive stays local. Sync
+    without signing in nothing syncs, and your archive stays local. Sync
     begins the moment you sign in with Apple or Google, and everything saved up
     to that point moves into your account.
   </p>
@@ -104,7 +107,7 @@
   <p>
     The app has no server of its own: your device talks only to Google Firebase
     (authentication, sync and, where needed, cloud AI) and to the address of the
-    link you saved. We do not collect advertising identifiers and do not track
+    link you saved — for X posts, X's embed services and image servers. We do not collect advertising identifiers and do not track
     you across apps or sites.
   </p>
   <p>
@@ -208,11 +211,11 @@
   <p>
     Summarizing and categorizing content happens one of two ways, and your
     device decides which. If your device supports Apple's own AI model
-    (iPhone 15 Pro and later), the work is done <strong>on the device</strong>
+    (iPhone 15 Pro and later, on iOS 26 or later), the work is done <strong>on the device</strong>
     and the content never leaves it. If your device does not support that model,
     or the model is temporarily unavailable, the work is done by
     <strong>Google's cloud model</strong> (Gemini via Firebase AI Logic) —
-    this is the route on older devices. You are told about this when you first
+    this is the route on older devices and on versions before iOS 26. You are told about this when you first
     open the app.
     What is sent for cloud processing is limited to the item's caption text and
     the name of the account that posted it — not your personal note, your

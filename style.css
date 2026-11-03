@@ -145,6 +145,14 @@ nav.site a:hover {
   margin-bottom: 24px;
 }
 
+a.badge {
+  text-decoration: none;
+}
+
+a.badge:hover {
+  background: color-mix(in srgb, var(--accent) 28%, transparent);
+}
+
 /* Cards / features */
 
 section {
